@@ -6,6 +6,11 @@
 .DS_Store
 .idea
 *.code-workspace
+*.exe
+*.exe~
+*.dll
+*.swo
+*.dylib
 
 # docs
 docs/modelsvalidator/modelsvalidator
@@ -45,3 +50,8 @@ client/package-lock.json
 server/
 # OS3+-Submodules
 /autoupdate/
+
+*.test
+*.out
+.idea
+build
