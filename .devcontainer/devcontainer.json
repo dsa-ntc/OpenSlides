@@ -7,7 +7,17 @@
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/jenkinsx-cli:1": {},
 		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/jckimble/devcontainer-features/ngrok:3": {},
+		"ghcr.io/rio/features/chezmoi:1": {}
 	},
-	"postStartCommand": "minikube start"
+	"postStartCommand": "minikube start --cpus 4 --memory 6048 --disk-size=100g --addons=ingress --kubernetes-version=1.24",
+	"postAttachCommand": "export DOMAIN=\"$(minikube ip).ip.io\"",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"jenkinsxio.vscode-jx-tools"
+			]
+		}
+	}
 }
