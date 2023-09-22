@@ -16,7 +16,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"jenkinsxio.vscode-jx-tools"
+				"jenkinsxio.vscode-jx-tools",
+				"github.vscode-github-actions"
 			]
 		}
 	}
