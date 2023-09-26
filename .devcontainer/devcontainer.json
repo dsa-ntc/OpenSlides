@@ -13,5 +13,6 @@
 			}
 		}
 	},
-	"postCreateCommand": "openslides setup . && docker compose pull"
+	"postCreateCommand": "openslides setup . && docker compose pull",
+	"postStartCommand": "docker compose up -d"
 }
