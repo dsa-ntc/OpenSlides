@@ -1,8 +1,6 @@
 {
 	"name": "Docker in Docker",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "mcr.microsoft.com/devcontainers/base",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
@@ -13,6 +11,13 @@
 			}
 		}
 	},
-	"postCreateCommand": "openslides setup . && docker compose pull",
+	"portsAttributes": {
+		"8000": {
+			"label": "Open Slides",
+			"protocol": "https"
+		}
+	},
+	"onCreateCommand": "wget https://github.com/OpenSlides/openslides-manage-service/releases/download/latest/openslides --no-clobber && chmod +x openslides && sudo mv openslides /usr/local/bin",
+	"postCreateCommand": "openslides setup .",
 	"postAttachCommand": "docker compose up -d"
 }
