@@ -12,5 +12,5 @@
 		}
 	},
 	// "postCreateCommand": "./openslides setup && docker compose pull"
-	"postCreateCommand": "curl -LO https://github.com/OpenSlides/openslides-manage-service/releases/download/latest/openslides && chmod +x openslides && ./openslides setup ."
+	"postCreateCommand": "curl -LO https://github.com/OpenSlides/openslides-manage-service/releases/download/latest/openslides && chmod +x openslides && ./openslides setup . && docker compose pull"
 }
