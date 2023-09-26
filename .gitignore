@@ -46,3 +46,4 @@ server/
 # OS3+-Submodules
 /autoupdate/
 secrets
+docker-compose.yml
